@@ -1,0 +1,24 @@
+{
+  "name": "simple-todo-list",
+  "version": "1.0.0",
+  "description": "Una aplicación simple de Todo List con JavaScript vanilla, Fetch API, json-server y localStorage",
+  "main": "index.html",
+  "scripts": {
+    "server": "json-server --watch db.json --port 3000",
+    "start": "npm run server",
+    "dev": "json-server --watch db.json --port 3000 --delay 500"
+  },
+  "keywords": [
+    "todo",
+    "javascript",
+    "vanilla-js",
+    "fetch-api",
+    "json-server",
+    "localstorage"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "devDependencies": {
+    "json-server": "^0.17.4"
+  }
+}
