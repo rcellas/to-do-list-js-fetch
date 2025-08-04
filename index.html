@@ -3,58 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Todo List</title>
-    <link rel="stylesheet" href="src/css/styles.css">
+    <title>Todo App con Fetch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="src/css/todo.css">
 </head>
 <body>
     <div class="container">
-        <header class="header">
-            <h1>📝 Todo List</h1>
-            <p>Gestiona tus tareas de forma simple</p>
-        </header>
-
-        <main class="main">
-            <section class="form-section">
-                <form id="todo-form" class="todo-form">
-                    <input 
-                        type="text" 
-                        id="todo-input" 
-                        placeholder="Nueva tarea..." 
-                        required
-                        class="todo-input"
-                    >
-                    <button type="submit" class="btn btn-primary">Agregar</button>
-                </form>
-            </section>
-
-            <section class="stats-section">
-                <div class="stats">
-                    <div class="stat">
-                        <span class="stat-number" id="total-count">0</span>
-                        <span class="stat-label">Total</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" id="pending-count">0</span>
-                        <span class="stat-label">Pendientes</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" id="completed-count">0</span>
-                        <span class="stat-label">Completadas</span>
-                    </div>
-                </div>
-            </section>
-
-            <section class="todos-section">
-                <ul id="todos-list" class="todos-list"></ul>
-            </section>
-        </main>
+        <div id="new-todo">
+            <input type="text" placeholder="Tareas por hacer">
+            <button type="button" id="submit">Añadir</button>
+        </div>
+        <div id="todos"></div>
     </div>
-
-    <div id="notification" class="notification hidden"></div>
-
-    <script src="src/js/api.js"></script>
-    <script src="src/js/storage.js"></script>
-    <script src="src/js/ui.js"></script>
-    <script src="src/js/app.js"></script>
+    <script type="module" src="src/js/todo.js"></script>
 </body>
 </html>
